@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.generation.lojadegames.model.Categoria.java&apos; to &apos;CategoriaConsole.java&apos;&#x0D;&#x0A;- Original project: &apos;lojadegames&apos;&#x0D;&#x0A;- Original element: &apos;com.generation.lojadegames.model.Categoria.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.generation.lojadegames.model.CategoriaConsole.java&apos;" description="Rename compilation unit &apos;Categoria.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.generation.lojadegames.model{Categoria.java" name="CategoriaConsole.java" references="false" stamp="1645630093860" version="1.0"/>
+</session>
