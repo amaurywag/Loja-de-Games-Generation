@@ -20,10 +20,7 @@ public class CategoriaConsole {
 	@Size(min=5, max=30, message="Campo obrigatório, de 5 à 30 caracteres.")
 	private String console;
 	
-	@NotBlank(message="Este campo obrigatório.")
-	@Size(min=4, max=4, message="Este campo deve conter 4 dígitos")
 	private int anoDeLancamento;
-	
 	
 	@NotBlank(message="Este campo obrigatório, de 5 à 30 caracteres.")
 	@Size(max=15, message="Campo obrigatório, máximo de 15 caracteres.")
@@ -51,6 +48,14 @@ public class CategoriaConsole {
 
 	public void setAnoDeLancamento(int anoDeLancamento) {
 		this.anoDeLancamento = anoDeLancamento;
+	}
+
+	public String getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(String empresa) {
+		this.empresa = empresa;
 	}
 	
 }
