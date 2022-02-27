@@ -4,27 +4,34 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
-@Table (name="tb_console")
+@Table(name = "tb_console")
 public class CategoriaConsole {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@NotBlank(message="Este campo obrigatório, de 5 à 30 caracteres.")
-	@Size(min=5, max=30, message="Campo obrigatório, de 5 à 30 caracteres.")
+
+	@NotBlank(message = "Este campo obrigatório, de 5 à 30 caracteres.")
+	@Size(min = 5, max = 30, message = "Campo obrigatório, de 5 à 30 caracteres.")
 	private String console;
-	
+
 	private int anoDeLancamento;
-	
-	@NotBlank(message="Este campo obrigatório, de 5 à 30 caracteres.")
-	@Size(max=15, message="Campo obrigatório, máximo de 15 caracteres.")
+
+	@NotBlank(message = "Este campo obrigatório, de 5 à 30 caracteres.")
+	@Size(max = 15, message = "Campo obrigatório, máximo de 15 caracteres.")
 	private String empresa;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("console")
+	private Produtos produtos;
 
 	public Long getId() {
 		return id;
@@ -57,5 +64,13 @@ public class CategoriaConsole {
 	public void setEmpresa(String empresa) {
 		this.empresa = empresa;
 	}
-	
+
+	public Produtos getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(Produtos produtos) {
+		this.produtos = produtos;
+	}
+
 }
