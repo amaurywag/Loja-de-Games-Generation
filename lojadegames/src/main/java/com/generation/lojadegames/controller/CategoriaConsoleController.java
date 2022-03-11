@@ -22,11 +22,10 @@ import com.generation.lojadegames.repository.CategoriaConsoleRepository;
 
 @RestController
 @RequestMapping("/categoriaconsole")
-@CrossOrigin("*") // Informa que esta classe irá aceitar requisições de qualquer origem.
+@CrossOrigin("*")
 public class CategoriaConsoleController {
 
-	// injetar a classe repositório, dentro da classe controller
-	@Autowired // injeção de dependências do Spring (?)
+	@Autowired 
 	private CategoriaConsoleRepository repository;
 
 	@GetMapping
